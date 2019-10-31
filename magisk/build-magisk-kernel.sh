@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/bin/bash
 echo "*************************************************"
 echo "*** Build Magisk kernel for Samsung Galaxy S2 ***"
 echo "*************************************************"
