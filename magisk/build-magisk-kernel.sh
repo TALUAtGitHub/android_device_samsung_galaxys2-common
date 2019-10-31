@@ -20,6 +20,9 @@ echo -n "OK to build and flash Magisk on your device (y/N)?"
 read USERINPUT
 case $USERINPUT in
  y|Y)
+	cd ../../../..
+	source build/envsetup.sh
+	lunch lineage_i9100-userdebug
 	echo "Backup /dev/block/mmcblk0p5 to /sdcard1/boot_orig.img..."
 	cout
 	adb shell dd if=/dev/block/mmcblk0p5 of=/sdcard1/boot_orig.img
