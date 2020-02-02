@@ -11,3 +11,4 @@ type sysfs_rmnet, fs_type, sysfs_type;
 type sysfs_io_sched, fs_type, sysfs_type;
 type sysfs_sec_key, fs_type, sysfs_type;
 type sysfs_sec_touchkey, fs_type, sysfs_type;
+type sysfs_s5p-tmu_curr_temp, fs_type, sysfs_type;
