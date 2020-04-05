@@ -17,7 +17,7 @@ echo "           Magisk reflashable file is written to /sdcard1/boot_magisk.img"
 echo ""
 echo "*** CONNECT YOUR PHONE AND MAKE SURE TWRP-RECOVERY IS RUNNING ***"
 echo -n "OK to build and flash Magisk on your device (y/N)?"
-read USERINPUT
+read -r USERINPUT
 case $USERINPUT in
  y|Y)
 	echo "Setting up the build environment..."
@@ -42,7 +42,8 @@ case $USERINPUT in
 
 	echo "Install Magisk in TWRP now!"
 	echo "If you stop now, you need to flash /sdcard1/boot_orig.img before booting your phone!"
-	read -p "Press [ENTER] to continue"
+	echo "Press [ENTER] to continue"
+	read -r
 	echo ""
 
 	echo "Extracting modified Magisk-ramdisk from /dev/block/mmcblk0p5..."
