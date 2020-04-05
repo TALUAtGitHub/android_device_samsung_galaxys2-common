@@ -24,7 +24,8 @@ case $USERINPUT in
 	cd ../../../..
 	source build/envsetup.sh
 	lunch lineage_i9100-userdebug
-	read -p "Build environment setup has finished. You should now connect your device. Press [ENTER] to continue."
+	echo "Build environment setup has finished. You should now connect your device. Press [ENTER] to continue."
+	read -r
 
 	echo "Backup /dev/block/mmcblk0p5 to /sdcard1/boot_orig.img..."
 	cout
