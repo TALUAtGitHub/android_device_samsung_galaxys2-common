@@ -76,10 +76,16 @@ case $USERINPUT in
 	echo "Pushing flashable /sdcard1/boot_magisk.img..."
 	adb push boot.img /sdcard1/boot_magisk.img
 	echo "Pushing flashable /sdcard1/boot_magisk.img... Done!"
+
+	echo "Pushing kernel modules to /system/system/lib/modules/..."
+	cd system/lib/modules
+	adb push * /system/system/lib/modules/
+	echo "Pushing kernel modules to /system/system/lib/modules/... Done!"
+
 	echo ""
+
 	croot
 	rm buildspec.mk
-
 	BUILDSPECFILE=buildspec.mk.org
 	if test -f "$BUILDSPECFILE"; then
 		mv buildspec.mk.org buildspec.mk
