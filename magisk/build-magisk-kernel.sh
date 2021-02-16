@@ -71,10 +71,11 @@ case $USERINPUT in
 	adb push boot.img /sdcard1/boot_magisk.img
 	echo "Pushing flashable /sdcard1/boot_magisk.img... Done!"
 
-	echo "Pushing kernel modules to /system/system/lib/modules/..."
+	echo "Pushing kernel modules to /system_root/system/lib/modules/..."
+	adb shell mount /system_root
 	cd system/lib/modules
-	adb push * /system/system/lib/modules/
-	echo "Pushing kernel modules to /system/system/lib/modules/... Done!"
+	adb push * /system_root/system/lib/modules/
+	echo "Pushing kernel modules to /system_root/system/lib/modules/... Done!"
 
 	echo ""
 
